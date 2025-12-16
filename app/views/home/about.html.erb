@@ -1,0 +1,34 @@
+<h1>About Page</h1>
+This is the new About page.
+
+<p><%= @about_me %></p>
+
+<p>Random number: <%= @random_num %></p>
+<p>Random number: <%= @random_num + 1 %></p>
+
+
+
+  <button class="btn btn-secondary" onclick="window.location.reload();">
+    Reload
+  </button>
+<div class="d-flex gap-2 align-items-center mb-3">
+  <details class="start-container">
+    <summary class="btn btn-primary">Start</summary>
+
+    <div class="video-block">
+      <video autoplay muted playsinline width="640">
+        <source src="<%= asset_path("countdown.mp4") %>#t=5" type="video/mp4">
+      </video>
+    </div>
+    </br>
+    </br>
+    </br>
+    <div class="number-block text-center">
+    <h1 class="big-number"><%= @random_num %></h1>
+    </div>
+
+  </details>
+
+
+</div>
+

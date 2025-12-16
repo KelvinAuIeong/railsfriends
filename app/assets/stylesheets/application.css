@@ -1,0 +1,46 @@
+/*
+ * This is a manifest file that'll be compiled into application.css.
+ *
+ * With Propshaft, assets are served efficiently without preprocessing steps. You can still include
+ * application-wide styles in this file, but keep in mind that CSS precedence will follow the standard
+ * cascading order, meaning styles declared later in the document or manifest will override earlier ones,
+ * depending on specificity.
+ *
+ * Consider organizing styles into separate files for maintainability.
+ */
+/* Remove default arrow */
+.start-container summary {
+  list-style: none;
+  cursor: pointer;
+}
+.start-container summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Initial states */
+.video-block {
+  animation: hideVideo 0s linear 5s forwards;
+}
+
+.number-block {
+  opacity: 0;
+  animation: showNumber 0s linear 5s forwards;
+}
+
+/* Animations */
+@keyframes hideVideo {
+  to {
+    display: none;
+  }
+}
+
+@keyframes showNumber {
+  to {
+    opacity: 1;
+  }
+}
+
+.big-number {
+  font-size: 20rem;   /* try 4rem, 6rem, or 8rem */
+  font-weight: bold;
+}
