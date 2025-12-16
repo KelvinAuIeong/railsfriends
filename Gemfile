@@ -60,13 +60,11 @@ group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
   # Use sqlite3 as the database for Active Record
-  gem "sqlite3", ">= 2.1"
+  gem "sqlite3"
 end
 
 group :production do
-  # Use PostgreSQL as the database for Active Record
-  gem 'pg', '~> 1.6', '>= 1.6.2'
-
+  gem "pg"
 end
 
 
